@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/anton_v27_1Ptgg87LROyAm3K9-C8QSw.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('fonts/sourcesans3_v20_nwpStKy2OAdR1K-IwhWudF-R3wEaZfrc.woff2') format('woff2');
+}

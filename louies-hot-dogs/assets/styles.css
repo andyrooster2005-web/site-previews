@@ -1,0 +1,71 @@
+@import url("fonts.css");
+:root{--mustard:#e3b505;--ketchup:#c1121f;--cream:#fff8e8;--ink:#1a1a1a;--max:1080px}
+*{box-sizing:border-box}html,body{margin:0}html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+img{max-width:100%;display:block}a{color:inherit}
+.wrap{width:min(var(--max),calc(100% - 2.2rem));margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:20}
+.check{height:14px;background:repeating-conic-gradient(#1a1a1a 0% 25%,#fff 0% 50%) 50%/16px 16px}
+header.site{background:var(--ketchup);color:#fff;position:sticky;top:0;z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:.85rem 0}
+.logo{font-family:"Anton",Impact,sans-serif;font-size:1.5rem;letter-spacing:.03em;text-decoration:none}
+nav a{color:#fff;text-decoration:none;font-weight:700;margin-left:1rem}
+nav a:hover{text-decoration:underline;text-underline-offset:3px}
+.hero{background:var(--mustard);padding:3rem 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1.5rem;align-items:end}
+h1{font-family:"Anton",Impact,sans-serif;font-size:clamp(3.2rem,10vw,7rem);line-height:.88;margin:0 0 .6rem;letter-spacing:-.01em}
+.tag{font-size:1.25rem;max-width:28ch;margin:0 0 1.4rem;font-weight:600}
+.btn{display:inline-block;padding:.8rem 1.15rem;text-decoration:none;font-weight:800;border-radius:6px}
+.btn-red{background:var(--ketchup);color:#fff}.btn-red:hover{background:#9d0e18}
+.btn-dark{background:#1a1a1a;color:#fff;margin-left:.4rem}
+.hero img{width:100%;max-height:440px;object-fit:contain;object-position:bottom}
+section{padding:3.8rem 0}
+h2{font-family:"Anton",Impact,sans-serif;font-size:clamp(2rem,5vw,3rem);margin:0 0 .7rem;letter-spacing:.01em}
+.lead{max-width:58ch}
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.ticket{background:#fff;border:2px dashed #1a1a1a;padding:1.1rem 1.15rem;box-shadow:6px 6px 0 #1a1a1a}
+.ticket h3{font-family:"Anton",Impact,sans-serif;margin:0 0 .4rem;font-size:1.4rem}
+.ticket ul{margin:0;padding-left:1.1rem}
+.fries{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.5rem;align-items:center;background:var(--mustard);padding:2.4rem 0}
+.fries img{width:100%;max-height:420px;object-fit:contain}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.chalkboard{background:#1a1a1a;color:var(--cream);padding:1.6rem}
+.chalkboard h2{color:#fff}
+.hours p{display:flex;justify-content:space-between;border-bottom:1px solid #444;margin:0;padding:.4rem 0;font-weight:700}
+.map-wrap{position:relative;min-height:320px;background:#ddd}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.rating{font-family:"Anton",Impact,sans-serif;font-size:4.2rem;line-height:.9;margin:.2rem 0}
+footer.site{background:#1a1a1a;color:#d7c9a8;padding:2rem 0;font-size:.92rem}
+footer strong{color:#fff}footer a{color:var(--mustard)}
+@media (max-width:800px){
+  .hero-grid,.tickets,.fries,.visit-grid{grid-template-columns:1fr}
+  .tickets{grid-auto-rows:auto}
+  nav a{margin:0 .7rem 0 0}
+  h1{font-size:clamp(2.6rem,16vw,4.2rem)}
+}
+
+
+.map-card{display:flex;flex-direction:column;min-height:100%;background:#ddd}
+.map-wrap{position:relative;flex:1;min-height:320px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 12px,transparent 12px 24px),#ddd;overflow:hidden}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;min-height:320px}
+.map-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;color:#444;text-align:center;padding:1rem;pointer-events:none;z-index:0}
+.map-ph strong{font-size:1.05rem;color:#1a1a1a}
+.map-link{display:block;text-align:center;padding:.85rem 1rem;background:#c1121f;color:#fff;text-decoration:none;font-weight:700;position:relative;z-index:2}
+.map-link:hover{filter:brightness(1.08)}
+
+.tickets{align-items:stretch}
+.ticket{align-self:stretch;display:flex;flex-direction:column}
+.hero img{width:100%;height:420px;object-fit:cover;object-position:center;background:#fff;box-shadow:0 10px 0 #1a1a1a}
+.fries{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.6rem;align-items:center;background:var(--mustard);padding:2.4rem 8% 2.8rem}
+.fries img{width:100%;height:380px;object-fit:cover;object-position:center;box-shadow:8px 8px 0 #1a1a1a}
+@media (max-width:800px){
+  .fries{grid-template-columns:1fr;padding:2rem 1.1rem}
+  .hero img{height:320px}
+  .fries img{height:280px}
+}
+
+
+
+.sample-preview-banner{position:sticky;top:0;z-index:40;background:#1a1a1a;color:#f4f1ea;font:600 0.8rem/1.35 system-ui,sans-serif;letter-spacing:.01em;text-align:center;padding:.4rem .75rem}
+.sample-preview-banner span{opacity:.95}
+header.site{top:0}
